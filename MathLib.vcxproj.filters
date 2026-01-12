@@ -13,6 +13,21 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="include">
+      <UniqueIdentifier>{e36f80e3-d622-4ec1-b3aa-658afd4ced85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\mathlib">
+      <UniqueIdentifier>{ebd2f039-c974-4590-8309-9866c9b68638}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="include\mathlib\linalg">
+      <UniqueIdentifier>{cd2caf1a-2bd4-4e8c-a288-10c724760fc7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="examples">
+      <UniqueIdentifier>{9283acd9-3e58-488b-941a-5da0faab64b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="tests">
+      <UniqueIdentifier>{458a15b0-6c77-457e-92ec-338b9507c39c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -24,6 +39,12 @@
     <ClCompile Include="vector3d.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="demo.cpp">
+      <Filter>examples</Filter>
+    </ClCompile>
+    <ClCompile Include="test_linalg.cpp">
+      <Filter>tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Vector2d.h">
@@ -32,10 +53,14 @@
     <ClInclude Include="vector3d.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="vector.hpp">
+      <Filter>include\mathlib\linalg</Filter>
+    </ClInclude>
+    <ClInclude Include="matrix.hpp">
+      <Filter>include\mathlib\linalg</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <Text Include="CMakeList.txt">
-      <Filter>Source Files</Filter>
-    </Text>
+    <Text Include="CMakeList.txt" />
   </ItemGroup>
 </Project>

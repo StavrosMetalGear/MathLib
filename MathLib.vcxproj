@@ -123,11 +123,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="demo.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="test_linalg.cpp" />
     <ClCompile Include="Vector2d.cpp" />
     <ClCompile Include="vector3d.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="matrix.hpp" />
+    <ClInclude Include="vector.hpp" />
     <ClInclude Include="Vector2d.h" />
     <ClInclude Include="vector3d.h" />
   </ItemGroup>
