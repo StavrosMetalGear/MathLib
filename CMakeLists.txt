@@ -7,7 +7,7 @@ option(MATHLIB_BUILD_EXAMPLES "Build MathLib examples" ON)
 add_library(MathLib INTERFACE)
 add_library(MathLib::MathLib ALIAS MathLib)
 
-target_compile_features(MathLib INTERFACE cxx_std_17)
+target_compile_features(MathLib INTERFACE cxx_std_20)
 target_include_directories(MathLib INTERFACE
   $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
   $<INSTALL_INTERFACE:include>
