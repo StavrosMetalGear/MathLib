@@ -1,6 +1,7 @@
 #include <iostream>
 #include "mathlib/linalg/vector.hpp"
 #include "mathlib/linalg/matrix.hpp"
+#include "mathlib/linalg/solve.hpp"
 
 
 int main() {

@@ -35,7 +35,9 @@ if(MATHLIB_BUILD_TESTS)
 
   enable_testing()
   add_executable(mathlib_tests tests/test_linalg.cpp
-  tests/test_core.cpp)
+  tests/test_core.cpp
+  tests/test_solve.cpp
+  )
   target_link_libraries(mathlib_tests PRIVATE MathLib::MathLib GTest::gtest_main)
   include(GoogleTest)
   gtest_discover_tests(mathlib_tests)
