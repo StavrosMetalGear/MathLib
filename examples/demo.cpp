@@ -2,6 +2,8 @@
 #include "mathlib/linalg/vector.hpp"
 #include "mathlib/linalg/matrix.hpp"
 #include "mathlib/linalg/solve.hpp"
+#include "mathlib/calculus/diff.hpp"
+#include "mathlib/calculus/integrate.hpp"
 
 
 int main() {
