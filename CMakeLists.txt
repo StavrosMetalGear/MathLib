@@ -38,6 +38,7 @@ if(MATHLIB_BUILD_TESTS)
   tests/test_core.cpp
   tests/test_solve.cpp
   tests/test_calculus.cpp
+  tests/test_next_math.cpp
   )
   target_link_libraries(mathlib_tests PRIVATE MathLib::MathLib GTest::gtest_main)
   include(GoogleTest)
