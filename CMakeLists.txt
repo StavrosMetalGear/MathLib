@@ -44,3 +44,39 @@ if(MATHLIB_BUILD_TESTS)
   include(GoogleTest)
   gtest_discover_tests(mathlib_tests)
 endif()
+include(GNUInstallDirs)
+include(CMakePackageConfigHelpers)
+
+# Your library target
+# (Assuming you already have: add_library(MathLib INTERFACE) and ALIAS MathLib::MathLib)
+
+# Install headers
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/include/
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+
+# Install/export the target
+install(TARGETS MathLib
+        EXPORT MathLibTargets)
+
+install(EXPORT MathLibTargets
+        NAMESPACE MathLib::
+        DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/MathLib)
+
+# Create a Config file for find_package(MathLib CONFIG REQUIRED)
+write_basic_package_version_file(
+  "${CMAKE_CURRENT_BINARY_DIR}/MathLibConfigVersion.cmake"
+  VERSION ${PROJECT_VERSION}
+  COMPATIBILITY SameMajorVersion
+)
+
+configure_package_config_file(
+  "${CMAKE_CURRENT_SOURCE_DIR}/cmake/MathLibConfig.cmake.in"
+  "${CMAKE_CURRENT_BINARY_DIR}/MathLibConfig.cmake"
+  INSTALL_DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/MathLib
+)
+
+install(FILES
+  "${CMAKE_CURRENT_BINARY_DIR}/MathLibConfig.cmake"
+  "${CMAKE_CURRENT_BINARY_DIR}/MathLibConfigVersion.cmake"
+  DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/MathLib
+)
